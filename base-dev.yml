@@ -10,7 +10,7 @@ spring:
     password: admin123
   jpa:
     database: mysql
-    
+    show-sql: true
   rabbitmq:
     host: 192.168.68.129
 
