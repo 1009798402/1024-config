@@ -20,3 +20,7 @@ eureka:
       defaultZone: http://127.0.0.1:6868/eureka/
   instance:
     prefer-ip-address: true #为了以后服务器上可以访问
+
+#测试bus动态改变自定义属性
+testbus:
+  hello,bus!
