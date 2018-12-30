@@ -1,0 +1,69 @@
+server:
+  port: 9012
+spring:
+  application:
+    name: 1024-web #指定服务名
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true #为了以后服务器上可以访问
+
+
+
+#配置zuul网关
+zuul:
+  routes:
+
+    #article  9004
+    1024-article:
+      path: /article/**
+      serviceId: 1024-article
+
+    #base     9001
+    1024-base:
+      path: /base/**
+      serviceId: 1024-base
+
+    #friend   9010
+    1024-friend:
+      path: /friend/**
+      serviceId: 1024-friend
+
+    #gathering  9005
+    1024-gathering:
+      path: /gathering/**
+      serviceId: 1024-gathering
+
+    #massage  9009
+    1024-massage:
+      path: /massage/**
+      serviceId: 1024-massage
+
+    #qa       9003
+    1024-qa:
+      path: /qa/**
+      serviceId: 1024-qa
+
+    #recruit  9002
+    1024-recruit:
+      path: /recruit/**
+      serviceId: 1024-recruit
+
+    #search   9007
+    1024-search:
+      path: /search/**
+      serviceId: 1024-search
+
+    #spit     9006
+    1024-spit:
+      path: /spit/**
+      serviceId: 1024-spit
+
+    #user     9008
+    1024-user:
+      path: /user/**
+      serviceId: 1024-user
+

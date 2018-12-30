@@ -1,0 +1,19 @@
+server:
+  port: 9006
+spring:
+  application:
+    name: 1024-spit #指定服务名
+  data:
+    mongodb:
+      host: 192.168.68.129
+      database: spitdb
+  redis:
+    host: 192.168.68.129
+
+
+  eureka:
+    client:
+      service-url:
+        defaultZone: http://127.0.0.1:6868/eureka/
+    instance:
+      prefer-ip-address: true #为了以后服务器上可以访问

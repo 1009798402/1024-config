@@ -1,0 +1,34 @@
+server:
+  port: 9008
+spring:
+  application:
+    name: 1024-user #指定服务名
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.68.129:3306/tensquare_user?useUnicode=true&amp;characterEncoding=UTF8
+    username: root
+    password: admin123
+  jpa:
+    database: MySQL
+    show-sql: true
+  rabbitmq:
+    host: 192.168.68.129
+  redis:
+    host: 192.168.68.129
+
+
+jwt:
+  config:
+    #盐(加密规则)
+    salt: highqi_123
+    #过期时间 毫秒
+    expirationTime: 1800000
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true #为了以后服务器上可以访问
